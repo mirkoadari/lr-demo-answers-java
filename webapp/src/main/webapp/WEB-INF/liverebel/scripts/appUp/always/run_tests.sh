@@ -1,7 +1,7 @@
 #!/bin/bash
 
 remoteport=$(cat "$HOME/tunnelport")
-port=$( echo "$directUrls" | ruby -ruri -e 'puts URI.parse(gets.chomp).port' )
+port=$( echo "$directUrls" | /opt/ruby/bin/ruby -ruri -e 'puts URI.parse(gets.chomp).port' )
 ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -nNT -R $remoteport:localhost:$port vagrant@java.answers.liverebel.com &
 pid=$!
 status=$?
