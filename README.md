@@ -39,7 +39,7 @@ Each version is represented with a separate branch, where `master` refers to `4.
 
 4. Upload all `lr-demo-answers-java-<version>.war` archives from the output directory to LiveRebel.
 
-We have prepared a Vagrant box for Rebel Answers to make trying it out quick and easy. Follow the instructions at https://github.com/gbevin/lr-demo-provisioning (scroll down for Java environment instructions).
+We have prepared a Vagrant box for Rebel Answers to make trying it out quick and easy. Follow the instructions at https://github.com/zeroturnaround/lr-demo-provisioning (scroll down for Java environment instructions).
 
 ## Directory Structure ##
 The project is structured as a Maven multi-module build. Integration tests are in the `integration` module and the web application itself can be found in the `webapp` mode.
