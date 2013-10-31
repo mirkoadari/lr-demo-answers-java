@@ -1,5 +1,10 @@
 package com.zeroturnaround.rebelanswers.tests.functional;
 
+import static org.junit.Assert.assertEquals;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,11 +13,6 @@ import org.junit.runners.JUnit4;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import static junit.framework.Assert.assertEquals;
 
 @RunWith(JUnit4.class)
 public class SiteTest {
@@ -35,6 +35,6 @@ public class SiteTest {
   @Test
   public void testIndex() {
     driver.get("http://localhost:" + System.getProperty("remotePort") + "/lr-demo-answers-java");
-    assertEquals(driver.getTitle(), "A wrong title");
+    assertEquals("A wrong title", driver.getTitle());
   }
 }
