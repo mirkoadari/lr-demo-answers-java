@@ -14,7 +14,7 @@
 
   <properties>
     <junit.version>4.11</junit.version>
-    <selenium-java.version>2.31.0</selenium-java.version>
+    <selenium-java.version>2.38.0</selenium-java.version>
   </properties>
 
   <dependencies>
