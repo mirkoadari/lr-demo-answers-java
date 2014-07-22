@@ -23,7 +23,7 @@ public class SiteTest {
   public void setUp() throws MalformedURLException {
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setBrowserName("chrome");
-    driver = new RemoteWebDriver(new URL("http://java.answers.liverebel.com:4444/wd/hub"), capabilities);
+    driver = new RemoteWebDriver(capabilities);
   }
 
   @After
@@ -34,7 +34,7 @@ public class SiteTest {
 
   @Test
   public void testIndex() {
-    driver.get("http://localhost:" + System.getProperty("remotePort") + "/lr-demo-answers-java");
+    driver.get(System.getProperty("remoteUrl"));
     assertEquals("Rebel Answers - Questions", driver.getTitle());
   }
 }
